@@ -30,7 +30,7 @@ Add the new SSH key to your GitHub Account (link)[https://help.github.com/en/git
 
 # Creating a new repository from a local working directory:
 
-(link)[https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line]
+[link](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 
 - Create a new repository on GitHub.com
 - Initialize git inside your working directory `git init`
