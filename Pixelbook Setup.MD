@@ -31,7 +31,7 @@ $ sudo apt-get install -y build-essential`
 **Adding Anaconda3 distribution to the Linux PATH**
   - Navigate to home director (e.g., /home/USERNAME)
   - Use the vim editor to open the _.bashrc_ file: `vim .bashrc`
-  - Add the following line into the _.bashrc_ file and save with (basic vim commands)[https://www.howtoforge.com/vim-basics]:
+  - Add the following line into the _.bashrc_ file and save with [basic vim commands](https://www.howtoforge.com/vim-basics):
   `export PATH="/home/<USERNAME>/anaconda3/bin/:$PATH"`
   - Rerun the _.bashrc_ file: `source .bashrc`
   - Activate the Python environment to check that you have successfully added Anaconda Python executable files into your Linux PATH: `source activate root`
