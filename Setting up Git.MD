@@ -17,14 +17,14 @@ Generate a SSH key using your email address associated with GitHub:
 - Press Enter to save the key to the default location (/Users/you/.ssh/id_rsa)
 - Type a secure passphrase twice
 
-Add the SSH key to the ssh-agent (link)[https://gist.github.com/JoaquimLey/31deaf857521319fcba8ee9f7af47299]
+Add the SSH key to the ssh-agent [link](https://gist.github.com/JoaquimLey/31deaf857521319fcba8ee9f7af47299)
 - `$ eval "$(ssh-agent -s)`
 - `$ ssh-add ~/.ssh/id_rsa`
 
-Add the new SSH key to your GitHub Account (link)[https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account]
+Add the new SSH key to your GitHub Account [link](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 - Copy the SSH key to your clipboard.
 - `$ pbcopy < ~/.ssh/id_rsa.pub`
-- NOTE: Debian does not include 'pbcopy', use 'xclip' (instead)[https://www.ostechnix.com/how-to-use-pbcopy-and-pbpaste-commands-on-linux/] and then run code above once editing aliases.
+- NOTE: Debian does not include 'pbcopy', use 'xclip' [instead](https://www.ostechnix.com/how-to-use-pbcopy-and-pbpaste-commands-on-linux/) and then run code above once editing aliases.
 - Add SSH Key to your GitHub by accessing Settings > SSH Keys and GPG Keys > New SSH Key/Add SSH Key
 
 
@@ -41,8 +41,11 @@ Add the new SSH key to your GitHub Account (link)[https://help.github.com/en/git
 - Push the changes: `$ git push -u origin master`
 
 
+
 [Adding a Remote Rep](https://help.github.com/en/github/using-git/adding-a-remote)
-`$ git remote add origin https://github.com/user/repo.git`
+- `$ git remote add origin https://github.com/user/repo.git`
+- If the remote URL needs to be reset use `$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git`
+
 
 
 # Cloning existing repositories:
