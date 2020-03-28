@@ -42,3 +42,11 @@ $ sudo apt-get install -y build-essential`
  1. Install basic R and development package `sudo apt-get install r-base r-base-dev`
  2. Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
  3. Install R Studio `sudo gdebi rstudio-1.2.5033-amd64.deb`
+
+Installing packages in R:
+Installing packages on Debian can be tricky as the distro does not include all the default system libraries you might need. For example, 'rvest' does not install by default because 'libcurl' is not installed by default. [Link to issue](https://community.rstudio.com/t/packages-installation-process-failed-on-linux-probably-due-to-missing-path-in-the-pkg-config-search-path/50619).
+In total I found myself needing to install the following:
+
+  `sudo apt install libcurl4-openssl-dev`
+
+  `sudo apt-get install libssl-dev`
