@@ -49,3 +49,8 @@ Add the new SSH key to your GitHub Account [link](https://help.github.com/en/git
 
 
 # Cloning existing repositories:
+- Navigate to the repository you'd like to clone on github
+- Click "Clone or Download" then choose "Clone with HTTPS" and click the clipboard icon to copy
+- Within the terminal, navigate to whichever to the location where you want the cloned directory to be made
+- Type `git clone` and paste the copied HTTPS URL
+- Press Enter

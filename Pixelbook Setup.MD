@@ -60,9 +60,9 @@ In total, I found myself needing to install the following to support installatio
 
 As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
 
-    -  `sudo apt-get install -y default-jre
-      sudo apt-get install -y default-jdk
-      sudo R CMD javareconf`
+    -  `sudo apt-get install -y default-jre`
+    -  `sudo apt-get install -y default-jdk`
+    -  `sudo R CMD javareconf`
 
 Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
 
