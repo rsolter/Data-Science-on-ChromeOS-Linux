@@ -48,24 +48,25 @@ Installing packages on Debian can be tricky as the distro does not include all t
 
 In total, I found myself needing to install the following to support installation of all the R packages:
 
-  `sudo apt install libcurl4-openssl-dev`
+    -   `sudo apt install libcurl4-openssl-dev`
 
-  `sudo apt-get install libssl-dev`
+    -   `sudo apt-get install libssl-dev`
 
-  `sudo apt-get install libudunits2-dev`
+    -   `sudo apt-get install libudunits2-dev`
 
-  `sudo apt-get install gdal-bin`
+    -   `sudo apt-get install gdal-bin`
 
-  `sudo apt install libgdal-dev`
+    -   `sudo apt install libgdal-dev`
 
 As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
 
-  `sudo apt-get install -y default-jre
-  sudo apt-get install -y default-jdk
-  sudo R CMD javareconf`
+    -  `sudo apt-get install -y default-jre
+      sudo apt-get install -y default-jdk
+      sudo R CMD javareconf`
 
-Among the packages [recommended by RStudio]((https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)), I installed the following:
-  `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp")`
+Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
+
+    `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp")`
 
 _Ongoing issues with "xlsx", "Hmisc"_
 
