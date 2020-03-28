@@ -43,9 +43,10 @@ $ sudo apt-get install -y build-essential`
  2. Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
  3. Install R Studio `sudo gdebi rstudio-1.2.5033-amd64.deb`
 
-Installing packages in R:
-Installing packages on Debian can be tricky as the distro does not include all the default system libraries you might need. For example, 'rvest' does not install by default because 'libcurl' is not installed by default. [Link to issue](https://community.rstudio.com/t/packages-installation-process-failed-on-linux-probably-due-to-missing-path-in-the-pkg-config-search-path/50619).
-In total I found myself needing to install the following:
+**Installing packages in R:**
+Installing packages on Debian can be tricky as the distro does not include all the default system libraries you might need. For example, 'rvest' does not install by default because 'libcurl' is not installed by default and [needs to be installed](https://community.rstudio.com/t/packages-installation-process-failed-on-linux-probably-due-to-missing-path-in-the-pkg-config-search-path/50619).
+
+In total, I found myself needing to install the following to support installation of all the R packages:
 
   `sudo apt install libcurl4-openssl-dev`
 
@@ -60,17 +61,13 @@ In total I found myself needing to install the following:
 As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
 
   `sudo apt-get install -y default-jre
-
   sudo apt-get install -y default-jdk
-
   sudo R CMD javareconf`
 
-  R packages installed:
+Among the packages [recommended by RStudio]((https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)), I installed the following:
   `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp")`
 
-  Also see this [useful list](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages) from RStudio
-
-Ongoing issues with "xlsx", "Hmisc"
+_Ongoing issues with "xlsx", "Hmisc"_
 
 
  4. Updating R on Linux [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
