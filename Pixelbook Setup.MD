@@ -50,3 +50,27 @@ In total I found myself needing to install the following:
   `sudo apt install libcurl4-openssl-dev`
 
   `sudo apt-get install libssl-dev`
+
+  `sudo apt-get install libudunits2-dev`
+
+  `sudo apt-get install gdal-bin`
+
+  `sudo apt install libgdal-dev`
+
+As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
+
+  `sudo apt-get install -y default-jre
+
+  sudo apt-get install -y default-jdk
+
+  sudo R CMD javareconf`
+
+  R packages installed:
+  `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp")`
+
+  Also see this [useful list](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages) from RStudio
+
+Ongoing issues with "xlsx", "Hmisc"
+
+
+ 4. Updating R on Linux [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
