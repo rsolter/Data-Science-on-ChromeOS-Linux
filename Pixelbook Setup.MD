@@ -1,8 +1,8 @@
 
 
-# Setting up Linux on Chromebook for Data Science
+## Setting up Linux on Chromebook for Data Science
 
-The steps below are ones I took to set up my Pixelbook to run Linux and install some common Data Science tools, including R (and R Studio), Python (Anaconda distribution), and Jupyter notebooks. While my machine runs Debian, the instructions should be similar for any Linux distribution.
+The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) and install some common Data Science tools, including R (and R Studio), Python (Anaconda distribution), and Jupyter notebooks.
 
 **Initial Steps**
  1. Set up Linux on your Chromebook following the instructions on [Google Support]([https://support.google.com/chromebook/answer/9145439?hl=en](https://support.google.com/chromebook/answer/9145439?hl=en)). Note that Debian is installed by default.
@@ -43,20 +43,33 @@ $ sudo apt-get install -y build-essential`
  2. Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
  3. Install R Studio `sudo gdebi rstudio-1.2.5033-amd64.deb`
 
-**Installing packages in R:**
+**Installing dependent Linux libraries for various R packages:**
 Installing packages on Debian can be tricky as the distro does not include all the default system libraries you might need. For example, 'rvest' does not install by default because 'libcurl' is not installed by default and [needs to be installed](https://community.rstudio.com/t/packages-installation-process-failed-on-linux-probably-due-to-missing-path-in-the-pkg-config-search-path/50619).
+
+Note that some instructions will ask that you [add-apt-repository](https://tecadmin.net/add-apt-repository-ubuntu/) before installing the software itself
 
 In total, I found myself needing to install the following to support installation of all the R packages:
 
-    -   `sudo apt install libcurl4-openssl-dev`
+    -   `sudo apt install libcurl4-openssl-dev` - _rvest_
 
-    -   `sudo apt-get install libssl-dev`
+    -   `sudo apt-get install libssl-dev` - _tidyverse_
 
     -   `sudo apt-get install libudunits2-dev`
 
-    -   `sudo apt-get install gdal-bin`
+    -   `sudo apt-get install gdal-bin` - _sf_
 
-    -   `sudo apt install libgdal-dev`
+    -   `sudo apt install libgdal-dev` - _sf_
+
+    -   `sudo apt-get install libprotobuf-dev protobuf-compiler` - _geojsonio_
+
+    -   `sudo apt-get install libv8-dev` - _geojsonio_
+
+    -   `sudo apt-get install libjq-dev`   - _geojsonio_
+
+    -   `sudo apt-get install libfontconfig1-dev`  - _mapview_
+
+    -   `sudo apt-get install libcairo2-dev`  - _mapview_
+
 
 As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
 
@@ -64,11 +77,22 @@ As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubun
     -  `sudo apt-get install -y default-jdk`
     -  `sudo R CMD javareconf`
 
+
+
+**Installing packages in R:**
 Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
 
-    `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp")`
+    `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly")`
 
 _Ongoing issues with "xlsx", "Hmisc"_
 
 
  4. Updating R on Linux [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
+
+
+
+5. Installing Docker
+[https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/)
+
+
+6. ZSH
