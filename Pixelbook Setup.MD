@@ -52,23 +52,23 @@ In total, I found myself needing to install the following to support installatio
 
     -   `sudo apt install libcurl4-openssl-dev` - _rvest_
 
-    -   `sudo apt-get install libssl-dev` - _tidyverse_
+    -   `sudo apt install libssl-dev` - _tidyverse_
 
-    -   `sudo apt-get install libudunits2-dev`
+    -   `sudo apt install libudunits2-dev`
 
-    -   `sudo apt-get install gdal-bin` - _sf_
+    -   `sudo apt install gdal-bin` - _sf_
 
     -   `sudo apt install libgdal-dev` - _sf_
 
-    -   `sudo apt-get install libprotobuf-dev protobuf-compiler` - _geojsonio_
+    -   `sudo apt install libprotobuf-dev protobuf-compiler` - _geojsonio_
 
-    -   `sudo apt-get install libv8-dev` - _geojsonio_
+    -   `sudo apt install libv8-dev` - _geojsonio_
 
-    -   `sudo apt-get install libjq-dev`   - _geojsonio_
+    -   `sudo apt install libjq-dev`   - _geojsonio_
 
-    -   `sudo apt-get install libfontconfig1-dev`  - _mapview_
+    -   `sudo apt install libfontconfig1-dev`  - _mapview_
 
-    -   `sudo apt-get install libcairo2-dev`  - _mapview_
+    -   `sudo apt install libcairo2-dev`  - _mapview_
 
 
 As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
