@@ -61,18 +61,28 @@ The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) 
 
 **ZSH**
 
+Following guide [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
+  - Install zsh `sudo apt install zsh`
+  - Check the version `zsh --version`
+  - Set zsh as the default shell `chsh -s $(which zsh)`
+
+Set up [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) to manage the zsh configuration. Getting started guide [here](https://medium.com/@dienbui/using-oh-my-zsh-f65be6460d3f)
+
+
 ****
 
 ### Python
 
 **Python: Anaconda and Jupyer Notebooks**
-Following guide posted [here]([https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs)):
+Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs):
+
 
  1. Install _nodejs_ which is required for _tldr_ and Jupyter Lab:
  ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 $ sudo apt-get install -y build-essential`
- 2. Install _tldr_ a short and useful help page for commands:
+ 2. Install _tldr_ a more user-friendly version of `man`, short and useful help page for commands:
  `$ sudo npm install -g tldr
   $ tldr --update
   $ tldr conda`
@@ -103,7 +113,7 @@ Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us
 
     `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly")`
 
-_Ongoing issues with "xlsx", "Hmisc"_
+_Ongoing issues with "prophet", "dtwclust"_
 
  **Updating R on Linux**
 
