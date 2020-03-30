@@ -4,6 +4,10 @@
 
 The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) and install some common Data Science tools, including R (and R Studio), Python (Anaconda distribution), and Jupyter notebooks.
 
+****
+
+### Linux System
+
 **Initial Steps**
  1. Set up Linux on your Chromebook following the instructions on [Google Support]([https://support.google.com/chromebook/answer/9145439?hl=en](https://support.google.com/chromebook/answer/9145439?hl=en)). Note that Debian is installed by default.
  2. Set password for Linux:
@@ -12,11 +16,58 @@ The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) 
   - It will prompt you twice for a new password. To exit, type exit`
  3. Update your Linux distro and packages from the terminal:
   `sudo apt-get update && sudo apt-get dist-upgrade`
- 4. Install **GDebi** for installing further packages, along with their dependencies:  `sudo apt install gdebi`
+ 4. Install **GDebi** for installing further packages, along with their dependencies:
+  `sudo apt install gdebi`
 
+**Install Atom**
+  1. Download latest .deb file from [https://atom.io/](https://atom.io/)
+  2. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
+
+**Installing Linux libraries**
+
+  In attempting to install certain pacakges on R, I was receiving error messaging pointing to missing libraries in my Linux install. For example, 'rvest' wouldn't install initially because 'libcurl' was not installed by default and [needed to be](https://community.rstudio.com/t/packages-installation-process-failed-on-linux-probably-due-to-missing-path-in-the-pkg-config-search-path/50619).
+
+  Note that some instructions will ask that you [add-apt-repository](https://tecadmin.net/add-apt-repository-ubuntu/) before installing the software itself
+
+  In total, I found myself needing to install the following to support installation of all the R packages I wanted to use (many pertained to mapping):
+
+      -   `sudo apt install libcurl4-openssl-dev`
+
+      -   `sudo apt install libssl-dev`
+
+      -   `sudo apt install libudunits2-dev`
+
+      -   `sudo apt install gdal-bin`
+
+      -   `sudo apt install libgdal-dev`
+
+      -   `sudo apt install libprotobuf-dev protobuf-compiler`
+
+      -   `sudo apt install libv8-dev`
+
+      -   `sudo apt install libjq-dev`
+
+      -   `sudo apt install libfontconfig1-dev`
+
+      -   `sudo apt install libcairo2-dev`
+
+
+  I also needed to [install Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
+
+      -  `sudo apt-get install -y default-jre`
+      -  `sudo apt-get install -y default-jdk`
+      -  `sudo R CMD javareconf`
+
+
+**ZSH**
+
+****
+
+### Python
 
 **Python: Anaconda and Jupyer Notebooks**
-Following guide posted [here]([https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs))
+Following guide posted [here]([https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs)):
+
  1. Install _nodejs_ which is required for _tldr_ and Jupyter Lab:
  ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
@@ -36,47 +87,15 @@ $ sudo apt-get install -y build-essential`
   - Rerun the _.bashrc_ file: `source .bashrc`
   - Activate the Python environment to check that you have successfully added Anaconda Python executable files into your Linux PATH: `source activate root`
 
+****
 
-**R & R Studio**
+### R
+
+**Base R & R Studio**
 
  1. Install basic R and development package `sudo apt-get install r-base r-base-dev`
  2. Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
- 3. Install R Studio `sudo gdebi rstudio-1.2.5033-amd64.deb`
-
-**Installing dependent Linux libraries for various R packages:**
-Installing packages on Debian can be tricky as the distro does not include all the default system libraries you might need. For example, 'rvest' does not install by default because 'libcurl' is not installed by default and [needs to be installed](https://community.rstudio.com/t/packages-installation-process-failed-on-linux-probably-due-to-missing-path-in-the-pkg-config-search-path/50619).
-
-Note that some instructions will ask that you [add-apt-repository](https://tecadmin.net/add-apt-repository-ubuntu/) before installing the software itself
-
-In total, I found myself needing to install the following to support installation of all the R packages:
-
-    -   `sudo apt install libcurl4-openssl-dev` - _rvest_
-
-    -   `sudo apt install libssl-dev` - _tidyverse_
-
-    -   `sudo apt install libudunits2-dev`
-
-    -   `sudo apt install gdal-bin` - _sf_
-
-    -   `sudo apt install libgdal-dev` - _sf_
-
-    -   `sudo apt install libprotobuf-dev protobuf-compiler` - _geojsonio_
-
-    -   `sudo apt install libv8-dev` - _geojsonio_
-
-    -   `sudo apt install libjq-dev`   - _geojsonio_
-
-    -   `sudo apt install libfontconfig1-dev`  - _mapview_
-
-    -   `sudo apt install libcairo2-dev`  - _mapview_
-
-
-As well as [installing Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
-
-    -  `sudo apt-get install -y default-jre`
-    -  `sudo apt-get install -y default-jdk`
-    -  `sudo R CMD javareconf`
-
+ 3. Install R Studio `sudo gdebi <rstudio deb file>`
 
 
 **Installing packages in R:**
@@ -86,13 +105,14 @@ Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us
 
 _Ongoing issues with "xlsx", "Hmisc"_
 
+ **Updating R on Linux**
 
- 4. Updating R on Linux [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
+ [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
+
+****
+
+### Other Tools
 
 
-
-5. Installing Docker
+**Docker**
 [https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/)
-
-
-6. ZSH

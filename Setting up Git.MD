@@ -18,7 +18,7 @@ Generate a SSH key using your email address associated with GitHub:
 - Type a secure passphrase twice
 
 Add the SSH key to the ssh-agent [link](https://gist.github.com/JoaquimLey/31deaf857521319fcba8ee9f7af47299)
-- `$ eval "$(ssh-agent -s)`
+- `$ eval "$(ssh-agent -s)"`
 - `$ ssh-add ~/.ssh/id_rsa`
 
 Add the new SSH key to your GitHub Account [link](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
