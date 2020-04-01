@@ -5,4 +5,4 @@
 # Data Science on Linux
 
 
-This repository stores tutorials and useful links I used to get a functioning data science toolkit running on Debian 10 (buster).
+This repository stores short tutorials and useful links I used to get a functioning data science toolkit running my Pixelbook using Debian 10 (buster).

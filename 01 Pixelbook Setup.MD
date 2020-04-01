@@ -16,12 +16,17 @@ The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) 
   - It will prompt you twice for a new password. To exit, type exit`
  3. Update your Linux distro and packages from the terminal:
   `sudo apt-get update && sudo apt-get dist-upgrade`
- 4. Install **GDebi** for installing further packages, along with their dependencies:
-  `sudo apt install gdebi`
+
+
+**Install Debian Backports**
+
+Debai
 
 **Install Atom**
-  1. Download latest .deb file from [https://atom.io/](https://atom.io/)
-  2. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
+  1. Install **GDebi** for installing further packages, along with their dependencies:
+   `sudo apt install gdebi`
+  2. Download latest .deb file from [https://atom.io/](https://atom.io/)
+  3. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
 
 **Installing Linux libraries**
 
