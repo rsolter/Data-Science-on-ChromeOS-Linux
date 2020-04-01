@@ -70,59 +70,5 @@ Following guide [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 Set up [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) to manage the zsh configuration. Getting started guide [here](https://medium.com/@dienbui/using-oh-my-zsh-f65be6460d3f)
 
 
-****
-
-### Python
-
-**Python: Anaconda and Jupyer Notebooks**
-Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs):
-
-
- 1. Install _nodejs_ which is required for _tldr_ and Jupyter Lab:
- ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-$ sudo apt-get install -y build-essential`
- 2. Install _tldr_ a more user-friendly version of `man`, short and useful help page for commands:
- `$ sudo npm install -g tldr
-  $ tldr --update
-  $ tldr conda`
- 3. Download Anaconda from the [official website](https://www.anaconda.com/download/#linux) and install the .sh file using bash
- `$ bash Anaconda3-x.x.x-Linux-x86_64.sh`
-
-**Adding Anaconda3 distribution to the Linux PATH**
-  - Navigate to home director (e.g., /home/USERNAME)
-  - Use the vim editor to open the _.bashrc_ file: `vim .bashrc`
-  - Add the following line into the _.bashrc_ file and save with [basic vim commands](https://www.howtoforge.com/vim-basics):
-  `export PATH="/home/<USERNAME>/anaconda3/bin/:$PATH"`
-  - Rerun the _.bashrc_ file: `source .bashrc`
-  - Activate the Python environment to check that you have successfully added Anaconda Python executable files into your Linux PATH: `source activate root`
-
-****
-
-### R
-
-**Base R & R Studio**
-
- 1. Install basic R and development package `sudo apt-get install r-base r-base-dev`
- 2. Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
- 3. Install R Studio `sudo gdebi <rstudio deb file>`
-
-
-**Installing packages in R:**
-Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
-
-    `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf", "fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly")`
-
-_Ongoing issues with "prophet", "dtwclust"_
-
- **Updating R on Linux**
-
- [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
-
-****
-
-### Other Tools
-
-
 **Docker**
 [https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/)
