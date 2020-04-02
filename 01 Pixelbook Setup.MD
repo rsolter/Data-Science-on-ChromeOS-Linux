@@ -20,7 +20,12 @@ The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) 
 
 **Install Debian Backports**
 
-Debai
+Debian is a very stable distribution of Linux and as a feature doesn't stay as up to date as others automatically. For example, when I first installed R without backports, the most up to date version I could install was 1.5 years old. To get around this, you can install Debian backports. Explainer article [here](https://linuxconfig.org/how-to-install-and-use-debian-backports)
+
+
+**Install Nano**
+  1. `sudo apt install nano`
+
 
 **Install Atom**
   1. Install **GDebi** for installing further packages, along with their dependencies:
