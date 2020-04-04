@@ -22,3 +22,15 @@ $ sudo apt-get install -y build-essential`
 While this can be done manually, it's actually [not recommended](https://docs.anaconda.com/anaconda/user-guide/faq/#) according to documentation on the Anaconda site:
 
   `We do not recommend adding Anaconda to the PATH manually. During installation, you will be asked “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”. If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, first run source <path to conda>/bin/activate and then run conda init."`
+
+
+
+**Libraries Worth Installing**
+- 'BeautifulSoup'
+- 'Selenium'
+
+
+**Getting Selenium Working**
+- Download [ChromeDriver - Webdriver](https://chromedriver.chromium.org/downloads)
+- Place the 'chromedriver' file in '/usr/local/bin' using `sudo cp chromedriver /usr/local/bin`
+- Run `sudo chmod ugo+x /usr/local/bin/chromedriver`
