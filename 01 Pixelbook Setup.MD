@@ -23,6 +23,27 @@ The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) 
 Debian is a very stable distribution of Linux and as a feature doesn't stay as up to date as others automatically. For example, when I first installed R without backports, the most up to date version I could install was 1.5 years old. To get around this, you can install Debian backports. Explainer article [here](https://linuxconfig.org/how-to-install-and-use-debian-backports)
 
 
+**Adding the Debian Unstable Repository**
+_necessary for installing more up to date software (e.g. Firefox)_
+_instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest-firefox-non-esr.html](https://www.linuxuprising.com/2019/12/how-to-install-latest-firefox-non-esr.html)_
+
+- Open `/etc/apt/sources.list` as root with a text editor:
+`sudo nano /etc/apt/sources.list`
+- At the end of the file add the following line
+`deb http://deb.debian.org/debian/ unstable main contrib non-free`
+- Set a low pin priority for the Debian Unstable repository so your system doesn't automatically install packages from it unless you manually specify this.
+  - Create and open a file /etc/apt/preferences.d/99pin-unstable as root with a text editor, for example using Nano command line text editor:
+  - `sudo nano /etc/apt/preferences.d/99pin-unstable`
+  - Paste the following in this file:
+    `Package: *
+     Pin: release a=stable
+     Pin-Priority: 900
+
+     Package: *
+     Pin release a=unstable
+     Pin-Priority: 10`
+
+
 **Install Nano**
   1. `sudo apt install nano`
 

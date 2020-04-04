@@ -34,3 +34,6 @@ While this can be done manually, it's actually [not recommended](https://docs.an
 - Download [ChromeDriver - Webdriver](https://chromedriver.chromium.org/downloads)
 - Place the 'chromedriver' file in '/usr/local/bin' using `sudo cp chromedriver /usr/local/bin`
 - Run `sudo chmod ugo+x /usr/local/bin/chromedriver`
+
+
+Install Firefox and [required Libraries/Packages](https://www.mozilla.org/en-US/firefox/74.0.1/system-requirements/)
