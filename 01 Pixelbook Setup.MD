@@ -32,16 +32,18 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
 - At the end of the file add the following line
 `deb http://deb.debian.org/debian/ unstable main contrib non-free`
 - Set a low pin priority for the Debian Unstable repository so your system doesn't automatically install packages from it unless you manually specify this.
-  - Create and open a file /etc/apt/preferences.d/99pin-unstable as root with a text editor, for example using Nano command line text editor:
+  - Create and open a file **/etc/apt/preferences.d/99pin-unstable** as root with a text editor, for example using Nano command line text editor:
   - `sudo nano /etc/apt/preferences.d/99pin-unstable`
   - Paste the following in this file:
-    `Package: *
-     Pin: release a=stable
-     Pin-Priority: 900
 
-     Package: *
-     Pin release a=unstable
-     Pin-Priority: 10`
+            `Package: *
+      	    Pin: release a=stable
+      	    Pin-Priority: 900
+
+      	    Package: *
+      	    Pin release a=unstable
+      	    Pin-Priority: 10`
+
 
 
 **Install Nano**

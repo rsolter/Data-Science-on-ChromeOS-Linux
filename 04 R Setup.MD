@@ -19,3 +19,8 @@ _Ongoing issues with "Hmisc", "reshape"_
  **Updating R on Linux**
 
  [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
+
+
+**Installing R in Jupyter**
+
+Requires **irkernel** to be [installed via conda](https://medium.com/@kyleake/how-to-install-r-in-jupyter-with-irkernel-in-3-steps-917519326e41).

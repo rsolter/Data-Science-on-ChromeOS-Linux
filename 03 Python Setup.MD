@@ -31,8 +31,9 @@ While this can be done manually, it's actually [not recommended](https://docs.an
 
 
 **Getting Selenium Working**
+- Install a browser of your choice, I installed chrome using instructions [here](https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-debian-9/)
 - Download [ChromeDriver - Webdriver](https://chromedriver.chromium.org/downloads)
-- Place the 'chromedriver' file in '/usr/local/bin' using `sudo cp chromedriver /usr/local/bin`
+- Copy the 'chromedriver' file to '/usr/local/bin' using `sudo cp chromedriver /usr/local/bin`
 - Run `sudo chmod ugo+x /usr/local/bin/chromedriver`
 
 
