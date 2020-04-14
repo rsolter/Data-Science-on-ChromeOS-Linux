@@ -21,6 +21,15 @@ _Ongoing issues with "Hmisc", "reshape"_
  [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
 
 
+
+
+
 **Installing R in Jupyter**
 
-Requires **irkernel** to be [installed via conda](https://medium.com/@kyleake/how-to-install-r-in-jupyter-with-irkernel-in-3-steps-917519326e41).
+  Datacamp [link](https://www.datacamp.com/community/blog/jupyter-notebook-r#comments)
+
+  Requires **irkernel** to be [installed via conda](https://medium.com/@kyleake/how-to-install-r-in-jupyter-with-irkernel-in-3-steps-917519326e41).
+
+  Also requires [r-essentials?](https://stackoverflow.com/questions/47615044/installin-r-in-jupyter-notebook)
+
+  [Error I'm seeing](https://github.com/ContinuumIO/anaconda-issues/issues/1133)
