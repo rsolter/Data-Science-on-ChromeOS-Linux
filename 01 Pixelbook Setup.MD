@@ -27,7 +27,7 @@ The steps below are ones I took to set up my Pixelbook's version of Debian 10 so
 
 **Install gdebi**
 
-    - `sudo apt install nano`
+    - `sudo apt install gdebi`
 
 ****
 
