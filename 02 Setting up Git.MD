@@ -1,6 +1,6 @@
 # Setting up Git
 
-[Guide from Karl Broman](https://kbroman.org/github_tutorial/pages/first_time.html)
+Referred to the [guide](https://kbroman.org/github_tutorial/pages/first_time.html) guide written by Karl Broman.
 
 Set up username and email:
 `$ git config --global user.name "John Doe"`
@@ -27,10 +27,9 @@ Add the new SSH key to your GitHub Account [link](https://help.github.com/en/git
 - NOTE: Debian does not include 'pbcopy', use 'xclip' [instead](https://www.ostechnix.com/how-to-use-pbcopy-and-pbpaste-commands-on-linux/) and then run code above once editing aliases.
 - Add SSH Key to your GitHub by accessing Settings > SSH Keys and GPG Keys > New SSH Key/Add SSH Key
 
-
 # Creating a new repository from a local working directory:
 
-[link](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
+[Reference](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 
 - Create a new repository on GitHub.com
 - Initialize git inside your working directory `git init`
@@ -42,15 +41,16 @@ Add the new SSH key to your GitHub Account [link](https://help.github.com/en/git
 
 
 
-[Adding a Remote Rep](https://help.github.com/en/github/using-git/adding-a-remote)
+[Adding a remote repository](https://help.github.com/en/github/using-git/adding-a-remote)
 - `$ git remote add origin https://github.com/user/repo.git`
 - If the remote URL needs to be reset use `$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git`
 
 
 
 # Cloning existing repositories:
+
 - Navigate to the repository you'd like to clone on github
 - Click "Clone or Download" then choose "Clone with HTTPS" and click the clipboard icon to copy
 - Within the terminal, navigate to whichever to the location where you want the cloned directory to be made
 - Type `git clone` and paste the copied HTTPS URL
-- Press Enter
+- Press 'Enter'

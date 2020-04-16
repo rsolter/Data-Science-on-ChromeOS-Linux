@@ -2,7 +2,7 @@
 
 ## Setting up Linux on Chromebook for Data Science
 
-The steps below are ones I took to set up my Pixelbook to run Linux (Debian 10) and install some common Data Science tools, including R (and R Studio), Python (Anaconda distribution), and Jupyter notebooks.
+The steps below are ones I took to set up my Pixelbook's version of Debian 10 so that I could get common Data Science tools running, including R (and R Studio), Python (Anaconda distribution), and Jupyter notebooks.
 
 ****
 
@@ -44,11 +44,13 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
       	    Pin release a=unstable
       	    Pin-Priority: 10`
 
-
+****
 
 **Install Nano**
   1. `sudo apt install nano`
 
+
+****
 
 **Install Atom**
   1. Install **GDebi** for installing further packages, along with their dependencies:
@@ -92,6 +94,8 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
       -  `sudo R CMD javareconf`
 
 
+****
+
 **ZSH**
 
 Following guide [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
@@ -103,5 +107,8 @@ Following guide [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 Set up [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) to manage the zsh configuration. Getting started guide [here](https://medium.com/@dienbui/using-oh-my-zsh-f65be6460d3f)
 
 
+****
+
 **Docker**
+
 [https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/)

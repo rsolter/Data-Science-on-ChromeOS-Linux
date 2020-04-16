@@ -23,18 +23,17 @@ While this can be done manually, it's actually [not recommended](https://docs.an
 
   `We do not recommend adding Anaconda to the PATH manually. During installation, you will be asked “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”. If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, first run source <path to conda>/bin/activate and then run conda init."`
 
+****
 
-
-**Libraries Worth Installing**
+**Libraries worth Installing**
 - 'BeautifulSoup'
 - 'Selenium'
 
 
 **Getting Selenium Working**
-- Install a browser of your choice, I installed chrome using instructions [here](https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-debian-9/)
+- Install a browser of your choice on the Debian partition, I installed Chrome using instructions [here](https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-debian-9/)
 - Download [ChromeDriver - Webdriver](https://chromedriver.chromium.org/downloads)
 - Copy the 'chromedriver' file to '/usr/local/bin' using `sudo cp chromedriver /usr/local/bin`
 - Run `sudo chmod ugo+x /usr/local/bin/chromedriver`
 
-
-Install Firefox and [required Libraries/Packages](https://www.mozilla.org/en-US/firefox/74.0.1/system-requirements/)
+Alternatively, I could have installed Firefox and the [required Libraries/Packages](https://www.mozilla.org/en-US/firefox/74.0.1/system-requirements/)

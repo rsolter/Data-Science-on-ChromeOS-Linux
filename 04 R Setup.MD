@@ -14,17 +14,18 @@ Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us
 
     `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf","fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly","forecast","tseries")`
 
-_Ongoing issues with "Hmisc", "reshape"_
+(_Ongoing issues with "Hmisc", "reshape"_)
 
- **Updating R on Linux**
+****
 
- [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html)
+ **Updating R on Debian**
+As mentioned in '01 Pixelbook Setup', Debian runs on much older, more stable versions of software. Here is a [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html) for updating R manually.
+
+****
+
+**Adding R Environment to Anaconda/Jupyter Notebooks**
 
 
-
-
-
-**Installing R in Jupyter**
 
   Datacamp [link](https://www.datacamp.com/community/blog/jupyter-notebook-r#comments)
 
@@ -34,5 +35,4 @@ _Ongoing issues with "Hmisc", "reshape"_
 
   [Error I'm seeing](https://github.com/ContinuumIO/anaconda-issues/issues/1133)
 
-# Possible help:
-  https://github.com/ContinuumIO/anaconda-issues/issues/11108
+  Possible help: https://github.com/ContinuumIO/anaconda-issues/issues/11108
