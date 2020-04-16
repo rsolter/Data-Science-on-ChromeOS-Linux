@@ -79,9 +79,16 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
 
   In total, I found myself needing to install the following to support installation of all the R packages I wanted to use (many pertained to mapping):
 
+
+required for devtools:
+
       -   `sudo apt install libcurl4-openssl-dev`
 
       -   `sudo apt install libssl-dev`
+
+      -   `sudo apt install libxml2-dev`
+
+other required libraries:      
 
       -   `sudo apt install libudunits2-dev`
 

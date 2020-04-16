@@ -36,20 +36,29 @@ Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us
 
 ## Incorporating R into Anaconda/Jupyter Notebooks**
 
-Adding R to functional notebooks is tricky, and I have not yet successfully achieved it. Some useful links and tutorials are listed below:
+Adding R to functional notebooks is tricky. After a few failed attempts, I found the following worked ([stackoverflow link](https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit/47895042)):
+
+  - Open R from the **command line**
+
+  - Need to install [IRKernel](https://irkernel.github.io/installation/) as well as the following dependencies: 'repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'
+
+  - Following [official instructions](https://irkernel.github.io/installation/), install 'IRkernel' and then make the kernel available to Jupyter by running the following:
+    `IRkernel::installspec()` for current user
+    `IRkernel::installspec(user = FALSE)` for all users
 
 
+Other links:
+  - R Installation can break [following a Conda R install](https://github.com/ContinuumIO/anaconda-issues/issues/11108)
+
+  - [“jupyter kernelspec --version” exited with code 127](https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit)
+
+  - [R in Jupyter under Linux](https://community.rstudio.com/t/r-in-jupyter-under-linux/18594)
+
+  - Official Documentation [link](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/
+
+  - Datacamp [link](https://www.datacamp.com/community/blog/jupyter-notebook-r#comments)
 
 
-  Official Documentation [link](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/)
-
-  Datacamp [link](https://www.datacamp.com/community/blog/jupyter-notebook-r#comments)
-
-  Requires **irkernel** to be [installed via conda](https://medium.com/@kyleake/how-to-install-r-in-jupyter-with-irkernel-in-3-steps-917519326e41).
-
-  Also requires [r-essentials?](https://stackoverflow.com/questions/47615044/installin-r-in-jupyter-notebook)
-
-  [Error I'm seeing](https://github.com/ContinuumIO/anaconda-issues/issues/1133)
 
   Possible help:
   - https://github.com/ContinuumIO/anaconda-issues/issues/11108
