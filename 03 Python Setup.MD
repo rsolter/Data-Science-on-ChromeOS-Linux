@@ -52,7 +52,7 @@ _Required files_
 
   - Analyze output and copy the second IP address refered to in the 'Broadcast section'. Something like **100.115.92.205**
 
-  - Generate a _jupyter_notebook_config.py_ in the directory _ /home/<user>/.jupyter/._ (create directory, if needed):
+  - Generate a _jupyter_notebook_config.py_ in the directory _ /home/< username >/.jupyter/._ (create directory, if needed):
       `jupyter notebook --generate-config`
 
   - Open the config file and update the following lines:
