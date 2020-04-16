@@ -35,11 +35,11 @@ _Required files_
 
 2. Adding Anaconda3 to the PATH using vim:
 
-  - Open the .bashrc file: `vim .bashrc`
+  - Open the .bashrc file: `vim ~/.bashrc`
 
   - Add the following line `export PATH="/home/<USERNAME>/anaconda3/bin/:$PATH"`
 
-  - Rerun the .bashrc file `source .bashrc`
+  - Rerun the .bashrc file `source ~/.bashrc`
 
   - Activate the Python environment to check that you have successfully added Anaconda Python executable files into your Linux PATH. `source activate root`
 
