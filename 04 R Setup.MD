@@ -35,4 +35,6 @@ As mentioned in '01 Pixelbook Setup', Debian runs on much older, more stable ver
 
   [Error I'm seeing](https://github.com/ContinuumIO/anaconda-issues/issues/1133)
 
-  Possible help: https://github.com/ContinuumIO/anaconda-issues/issues/11108
+  Possible help:
+  - https://github.com/ContinuumIO/anaconda-issues/issues/11108
+  - https://www.storybench.org/install-r-jupyter-notebook/
