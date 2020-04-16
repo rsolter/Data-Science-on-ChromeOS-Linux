@@ -10,22 +10,56 @@ Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixe
 
  ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
 
-`$ sudo apt-get install -y nodejs`
+  `$ sudo apt-get install -y nodejs`
 
-`$ sudo apt-get install -y build-essential`
+  `$ sudo apt-get install -y build-essential`
 
  2. Install _tldr_ a more user-friendly version of `man`, short and useful help page for commands:
- `$ sudo npm install -g tldr
-  $ tldr --update
-  $ tldr conda`
- 3. Download Anaconda from the [official website](https://www.anaconda.com/download/#linux) and install the .sh file using bash
+  `$ sudo npm install -g tldr`
+
+  `$ tldr --update`
+
+  `$ tldr conda`
+
+ 3. Download Anaconda from the [official website](https://www.anaconda.com/download/#linux) and install the .sh file using bash. Ensure that you are in your home directory before doing so (i.e., /home/USERNAME)
  `$ bash Anaconda3-x.x.x-Linux-x86_64.sh`
 
 **Adding Anaconda3 distribution to the Linux PATH**
 
-While this can be done manually, it's actually [not recommended](https://docs.anaconda.com/anaconda/user-guide/faq/#) according to documentation on the Anaconda site:
+  Open the .bashrc file: `vim .bashrc`
 
-  `We do not recommend adding Anaconda to the PATH manually. During installation, you will be asked “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”. If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, first run source <path to conda>/bin/activate and then run conda init."`
+  Add the following line `export PATH="/home/<USERNAME>/anaconda3/bin/:$PATH"`
+
+  Rerun the .bashrc file `source .bashrc`
+
+  Activate the Python environment to check that you have successfully added Anaconda Python execuable files into your Linux PATH. `source activate root`
+
+
+**Setting up Jupyter Lab**
+
+  Follow steps in the same [blog](https://randlow.github.io/posts/python/set-up-pixelbook-python/#id12) referred to above:
+
+  - Obtain the IP address: `ip addr`
+
+  - Analyze output and copy the second IP address refered to in the 'Broadcast section'. Something like **100.115.92.205**
+
+  - Generate a _jupyter_notebook_config.py_ in the directory _home/<user>/.jupyter/_:
+      `jupyter notebook --generate-config`
+
+  - Open the congif file and update the following lines:
+
+  `c.NotebookApp.allow_origin ='*' #allow all origins
+   c.NotebookApp.ip = '100.115.92.205' # listen to specific IP address`
+
+   - Test to ensure everything was installed correctly:
+   `jupyter notebook`
+   `jupyter lab`
+   `spyder`
+   `anaconda-navigator`
+
+
+
+
 
 ****
 
