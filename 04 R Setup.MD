@@ -1,6 +1,10 @@
 
 
-### R
+
+## R
+
+
+### Instructions for R and R Studio
 
 **Base R & R Studio**
 
@@ -16,6 +20,20 @@ Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us
 
 (_Ongoing issues with "Hmisc", "reshape"_)
 
+
+
+### Instructions for R, R Studio, and Jupyter Notebooks
+
+
+Steps
+
+- Install base R `sudo apt install r-base`
+- Add the cran repository to the list in sources.list Cran [link](https://cran.r-project.org/bin/linux/debian/) here.
+    - `sudo nano /etc/apt/sources.list`
+    - `deb http://cran.rstudio.com/bin/linux/debian buster-cran35/`
+
+
+
 ****
 
  **Updating R on Debian**
@@ -25,7 +43,7 @@ As mentioned in '01 Pixelbook Setup', Debian runs on much older, more stable ver
 
 **Adding R Environment to Anaconda/Jupyter Notebooks**
 
-
+  Official Documentation [link](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/)
 
   Datacamp [link](https://www.datacamp.com/community/blog/jupyter-notebook-r#comments)
 
