@@ -1,38 +1,47 @@
 
 
+
+
 ### Python
 
 **Python: Anaconda and Jupyer Notebooks**
 Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs):
 
+_Required files_
 
- 1. Install _nodejs_ which is required for _tldr_ and Jupyter Lab:
+ - Install _nodejs_ which is required for _tldr_ and Jupyter Lab:
 
- ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
+	 ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
 
-  `$ sudo apt-get install -y nodejs`
+	  `$ sudo apt-get install -y nodejs`
 
-  `$ sudo apt-get install -y build-essential`
+	  `$ sudo apt-get install -y build-essential`
 
- 2. Install _tldr_ a more user-friendly version of `man`, short and useful help page for commands:
-  `$ sudo npm install -g tldr`
+ - Install _tldr_ a more user-friendly version of `man`, short and useful help page for commands:
 
-  `$ tldr --update`
+	  `$ sudo npm install -g tldr`
 
-  `$ tldr conda`
+	  `$ tldr --update`
 
- 3. Download Anaconda from the [official website](https://www.anaconda.com/download/#linux) and install the .sh file using bash. Ensure that you are in your home directory before doing so (i.e., /home/USERNAME)
- `$ bash Anaconda3-x.x.x-Linux-x86_64.sh`
+	  `$ tldr conda`
 
-**Adding Anaconda3 distribution to the Linux PATH**
 
-  Open the .bashrc file: `vim .bashrc`
 
-  Add the following line `export PATH="/home/<USERNAME>/anaconda3/bin/:$PATH"`
+**Install Anaconda and add Anaconda3 distribution to the Linux PATH**
 
-  Rerun the .bashrc file `source .bashrc`
 
-  Activate the Python environment to check that you have successfully added Anaconda Python execuable files into your Linux PATH. `source activate root`
+1. Download Anaconda from the [official website](https://www.anaconda.com/download/#linux) and install the .sh file using bash. Ensure that you are in your home directory before doing so (i.e., /home/USERNAME)
+`$ bash Anaconda3-x.x.x-Linux-x86_64.sh`
+
+2. Adding Anaconda3 to the PATH using vim:
+
+  - Open the .bashrc file: `vim .bashrc`
+
+  - Add the following line `export PATH="/home/<USERNAME>/anaconda3/bin/:$PATH"`
+
+  - Rerun the .bashrc file `source .bashrc`
+
+  - Activate the Python environment to check that you have successfully added Anaconda Python executable files into your Linux PATH. `source activate root`
 
 
 **Setting up Jupyter Lab**
@@ -43,13 +52,14 @@ Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixe
 
   - Analyze output and copy the second IP address refered to in the 'Broadcast section'. Something like **100.115.92.205**
 
-  - Generate a _jupyter_notebook_config.py_ in the directory _home/<user>/.jupyter/_:
+  - Generate a _jupyter_notebook_config.py_ in the directory _home/<user>/.jupyter/_ (create directory, if needed):
       `jupyter notebook --generate-config`
 
-  - Open the congif file and update the following lines:
+  - Open the config file and update the following lines:
 
-  `c.NotebookApp.allow_origin ='*' #allow all origins
-   c.NotebookApp.ip = '100.115.92.205' # listen to specific IP address`
+	  `#c.NotebookApp.allow_origin ='*' #allow all origins`
+
+	   `#c.NotebookApp.ip = '100.115.92.205' # listen to specific IP address`
 
    - Test to ensure everything was installed correctly:
    `jupyter notebook`

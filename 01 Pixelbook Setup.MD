@@ -17,6 +17,20 @@ The steps below are ones I took to set up my Pixelbook's version of Debian 10 so
  3. Update your Linux distro and packages from the terminal:
   `sudo apt-get update && sudo apt-get dist-upgrade`
 
+****
+
+**Install Nano**
+
+    - `sudo apt install nano`
+
+****
+
+**Install gdebi**
+
+    - `sudo apt install nano`
+
+****
+
 
 **Install Debian Backports**
 
@@ -44,19 +58,15 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
       	    Pin release a=unstable
       	    Pin-Priority: 10`
 
-****
-
-**Install Nano**
-  1. `sudo apt install nano`
-
 
 ****
 
 **Install Atom**
-  1. Install **GDebi** for installing further packages, along with their dependencies:
-   `sudo apt install gdebi`
-  2. Download latest .deb file from [https://atom.io/](https://atom.io/)
-  3. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
+  1. Download latest .deb file from [https://atom.io/](https://atom.io/)
+  2. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
+
+
+****
 
 **Installing Linux libraries**
 

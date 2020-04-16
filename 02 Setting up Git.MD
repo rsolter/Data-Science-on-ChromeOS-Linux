@@ -3,8 +3,10 @@
 Referred to the [guide](https://kbroman.org/github_tutorial/pages/first_time.html) guide written by Karl Broman.
 
 Set up username and email:
-`$ git config --global user.name "John Doe"`
-`$ git config --global user.email johndoe@example.com`
+
+  `$ git config --global user.name "John Doe"`
+
+  `$ git config --global user.email johndoe@example.com`
 
 Setting up Atom as the default editor. Code for others linked [here](https://help.github.com/en/github/using-git/associating-text-editors-with-git)
 `$ git config --global core.editor "atom --wait"`
@@ -22,9 +24,7 @@ Add the SSH key to the ssh-agent [link](https://gist.github.com/JoaquimLey/31dea
 - `$ ssh-add ~/.ssh/id_rsa`
 
 Add the new SSH key to your GitHub Account [link](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
-- Copy the SSH key to your clipboard.
-- `$ pbcopy < ~/.ssh/id_rsa.pub`
-- NOTE: Debian does not include 'pbcopy', use 'xclip' [instead](https://www.ostechnix.com/how-to-use-pbcopy-and-pbpaste-commands-on-linux/) and then run code above once editing aliases.
+- Copy the SSH key to your clipboard `cat ~/.ssh/id_rsa`
 - Add SSH Key to your GitHub by accessing Settings > SSH Keys and GPG Keys > New SSH Key/Add SSH Key
 
 # Creating a new repository from a local working directory:
