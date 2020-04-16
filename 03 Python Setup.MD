@@ -8,8 +8,11 @@ Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixe
 
  1. Install _nodejs_ which is required for _tldr_ and Jupyter Lab:
  ` $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
 $ sudo apt-get install -y nodejs
+
 $ sudo apt-get install -y build-essential`
+
  2. Install _tldr_ a more user-friendly version of `man`, short and useful help page for commands:
  `$ sudo npm install -g tldr
   $ tldr --update
