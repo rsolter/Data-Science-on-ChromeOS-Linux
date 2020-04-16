@@ -31,6 +31,13 @@ The steps below are ones I took to set up my Pixelbook's version of Debian 10 so
 
 ****
 
+**Install Atom**
+  1. Download latest .deb file from [https://atom.io/](https://atom.io/)
+  2. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
+
+
+****
+
 
 **Install Debian Backports**
 
@@ -45,6 +52,8 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
 `sudo nano /etc/apt/sources.list`
 - At the end of the file add the following line
 `deb http://deb.debian.org/debian/ unstable main contrib non-free`
+
+**OPTIONAL**
 - Set a low pin priority for the Debian Unstable repository so your system doesn't automatically install packages from it unless you manually specify this.
   - Create and open a file **/etc/apt/preferences.d/99pin-unstable** as root with a text editor, for example using Nano command line text editor:
   - `sudo nano /etc/apt/preferences.d/99pin-unstable`
@@ -61,12 +70,6 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
 
 ****
 
-**Install Atom**
-  1. Download latest .deb file from [https://atom.io/](https://atom.io/)
-  2. Navigate to wherever the .deb file is saved and run `sudo gdebi <deb_file_name>`
-
-
-****
 
 **Installing Linux libraries**
 

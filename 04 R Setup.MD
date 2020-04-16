@@ -3,17 +3,30 @@
 
 ## R
 
-
-### Instructions for R and R Studio
-
-**Base R & R Studio**
-
- 1. Install basic R and development package `sudo apt-get install r-base r-base-dev`
- 2. Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
- 3. Install R Studio `sudo gdebi <rstudio deb file>`
+### Instructions for R, R Studio, and Jupyter Notebooks
 
 
-**Installing packages in R:**
+Steps
+
+- Add the cran repository to the list in sources.list Cran [link](https://cran.r-project.org/bin/linux/debian/) here.
+    - `sudo nano /etc/apt/sources.list`
+    - `deb http://cloud.r-project.org/bin/linux/debian buster-cran35/`
+- Following guide from Digital Ocean
+    - `sudo apt install dirmngr --install-recommends`
+    - `sudo apt install software-properties-common`
+    - `sudo apt install apt-transport-https`
+- Fetch and import the current key from [Cran](https://cran.r-project.org/bin/linux/debian/)
+    - `apt-key adv --keyserver keys.gnupg.net --recv-key 'E19F5F87128899B192B1A2C2AD5F960A256A04AF'`
+- Install up to date version of R
+    - `apt-get update`
+    - `apt-get install r-base r-base-dev`
+
+- Download R Studio for [Ubuntu/Debian](https://rstudio.com/products/rstudio/download/#download)
+
+- Install R Studio `sudo gdebi <rstudio deb file>`
+
+
+### Packages in R:
 Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
 
     `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf","fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly","forecast","tseries")`
@@ -21,27 +34,12 @@ Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us
 (_Ongoing issues with "Hmisc", "reshape"_)
 
 
+## Incorporating R into Anaconda/Jupyter Notebooks**
 
-### Instructions for R, R Studio, and Jupyter Notebooks
-
-
-Steps
-
-- Install base R `sudo apt install r-base`
-- Add the cran repository to the list in sources.list Cran [link](https://cran.r-project.org/bin/linux/debian/) here.
-    - `sudo nano /etc/apt/sources.list`
-    - `deb http://cran.rstudio.com/bin/linux/debian buster-cran35/`
+Adding R to functional notebooks is tricky, and I have not yet successfully achieved it. Some useful links and tutorials are listed below:
 
 
 
-****
-
- **Updating R on Debian**
-As mentioned in '01 Pixelbook Setup', Debian runs on much older, more stable versions of software. Here is a [link](http://scottsfarley.com/research/cloudcomputing/2016/07/19/Updating-R-on-Debian.html) for updating R manually.
-
-****
-
-**Adding R Environment to Anaconda/Jupyter Notebooks**
 
   Official Documentation [link](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/)
 
