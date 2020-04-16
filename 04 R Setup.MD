@@ -33,3 +33,6 @@ _Ongoing issues with "Hmisc", "reshape"_
   Also requires [r-essentials?](https://stackoverflow.com/questions/47615044/installin-r-in-jupyter-notebook)
 
   [Error I'm seeing](https://github.com/ContinuumIO/anaconda-issues/issues/1133)
+
+# Possible help:
+  https://github.com/ContinuumIO/anaconda-issues/issues/11108
