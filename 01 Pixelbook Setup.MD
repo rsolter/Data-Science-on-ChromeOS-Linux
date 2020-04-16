@@ -1,5 +1,6 @@
 
 
+
 ## Setting up Linux on Chromebook for Data Science
 
 The steps below are ones I took to set up my Pixelbook's version of Debian 10 so that I could get common Data Science tools running, including R (and R Studio), Python (Anaconda distribution), and Jupyter notebooks.
@@ -53,23 +54,7 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
 - At the end of the file add the following line
 `deb http://deb.debian.org/debian/ unstable main contrib non-free`
 
-**OPTIONAL**
-- Set a low pin priority for the Debian Unstable repository so your system doesn't automatically install packages from it unless you manually specify this.
-  - Create and open a file **/etc/apt/preferences.d/99pin-unstable** as root with a text editor, for example using Nano command line text editor:
-  - `sudo nano /etc/apt/preferences.d/99pin-unstable`
-  - Paste the following in this file:
-
-            `Package: *
-      	    Pin: release a=stable
-      	    Pin-Priority: 900
-
-      	    Package: *
-      	    Pin release a=unstable
-      	    Pin-Priority: 10`
-
-
 ****
-
 
 **Installing Linux libraries**
 
@@ -80,7 +65,7 @@ _instructsions here [https://www.linuxuprising.com/2019/12/how-to-install-latest
   In total, I found myself needing to install the following to support installation of all the R packages I wanted to use (many pertained to mapping):
 
 
-required for devtools:
+Required for **devtools**:
 
       -   `sudo apt install libcurl4-openssl-dev`
 
@@ -88,7 +73,7 @@ required for devtools:
 
       -   `sudo apt install libxml2-dev`
 
-other required libraries:      
+Other required libraries, often for mapping packages in R:      
 
       -   `sudo apt install libudunits2-dev`
 
@@ -118,17 +103,40 @@ other required libraries:
 
 **ZSH**
 
-Following guide [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+Set up [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) to manage the zsh configuration. Getting started guide [here](https://www.sitepoint.com/zsh-tips-tricks/)
 
-  - Install zsh `sudo apt install zsh`
-  - Check the version `zsh --version`
+Install ZSH:
+
+  - `sudo apt update`
+  - `sudo apt upgrade`
+  - `sudo apt install zsh`
+  - Verify installation: `zsh --version`
   - Set zsh as the default shell `chsh -s $(which zsh)`
+  - Log out and log back in of shell, at which point you'll be prompted with a few options for configuration. I've chosen **2** with the recommended configuration
 
-Set up [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) to manage the zsh configuration. Getting started guide [here](https://medium.com/@dienbui/using-oh-my-zsh-f65be6460d3f)
+Install Oh My ZSH! [official link](https://ohmyz.sh/)
+  - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` or `sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
+
+Customization
+    - Open congif file: `sudo nano ~/.zshrc`
+    - Note that default theme is set to 'robbyrussel'. This can be changed to any of the pre-installed themes or a [custom themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization)
+    - Custom themes must be installed in the themes folder `~/.oh-my-zsh`
+
+
 
 
 ****
+**Appendix**
 
-**Docker**
+**OPTIONAL** - Set a low pin priority for the Debian Unstable repository so your system doesn't automatically install packages from it unless you manually specify this.
+  - Create and open a file **/etc/apt/preferences.d/99pin-unstable** as root with a text editor, for example using Nano command line text editor:
+  - `sudo nano /etc/apt/preferences.d/99pin-unstable`
+  - Paste the following in this file:
 
-[https://docs.docker.com/install/linux/docker-ce/debian/](https://docs.docker.com/install/linux/docker-ce/debian/)
+            `Package: *
+      	    Pin: release a=stable
+      	    Pin-Priority: 900
+
+      	    Package: *
+      	    Pin release a=unstable
+      	    Pin-Priority: 10`

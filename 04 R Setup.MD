@@ -1,14 +1,14 @@
 
 
 
+
 ## R
 
-### Instructions for R, R Studio, and Jupyter Notebooks
+### Installing current version of R on Debian
 
 
-Steps
-
-- Add the cran repository to the list in sources.list Cran [link](https://cran.r-project.org/bin/linux/debian/) here.
+- Ensure Debian Unstable Repository is added to the sources.list (see '01 Pixelbook Setup.MD')
+- Add the CRAN repository to the list in sources.list Cran [link](https://cran.r-project.org/bin/linux/debian/) here.
     - `sudo nano /etc/apt/sources.list`
     - `deb http://cloud.r-project.org/bin/linux/debian buster-cran35/`
 - Following guide from Digital Ocean
@@ -25,41 +25,40 @@ Steps
 
 - Install R Studio `sudo gdebi <rstudio deb file>`
 
+****
 
-### Packages in R:
-Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
+### Incorporating R into Anaconda/Jupyter Notebooks
 
-    `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf","fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly","forecast","tseries")`
-
-(_Ongoing issues with "Hmisc", "reshape"_)
-
-
-## Incorporating R into Anaconda/Jupyter Notebooks**
-
-Adding R to functional notebooks is tricky. After a few failed attempts, I found the following worked ([stackoverflow link](https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit/47895042)):
+Adding R to Jupyter notebooks installed via Anaconda is tricky. After a few failed attempts, I found the following worked ([stackoverflow link](https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit/47895042)):
 
   - Open R from the **command line**
 
-  - Need to install [IRKernel](https://irkernel.github.io/installation/) as well as the following dependencies: 'repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'
+  - Install [IRKernel](https://irkernel.github.io/installation/) as well as the following dependencies: 'repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'
 
   - Following [official instructions](https://irkernel.github.io/installation/), install 'IRkernel' and then make the kernel available to Jupyter by running the following:
-    `IRkernel::installspec()` for current user
-    `IRkernel::installspec(user = FALSE)` for all users
+    `IRkernel::installspec()` (for current user)
+    `IRkernel::installspec(user = FALSE)` (for all users)
+
+****
+### Installing Packages in R:
+
+  Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
+
+      `install.packages("rvest","tidyverse","shiny","prophet","dtwclust","caret","WDI","leaflet","sf","fields","RODBC","DBI","xlsx","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly","forecast","tseries")`
+
+  (_Ongoing issues with "Hmisc", "reshape"_)
 
 
-Other links:
+
+
+****
+**Appendix**
+
+Links used in Troubleshooting IRKernel:
   - R Installation can break [following a Conda R install](https://github.com/ContinuumIO/anaconda-issues/issues/11108)
-
   - [“jupyter kernelspec --version” exited with code 127](https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit)
-
   - [R in Jupyter under Linux](https://community.rstudio.com/t/r-in-jupyter-under-linux/18594)
-
   - Official Documentation [link](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/
-
   - Datacamp [link](https://www.datacamp.com/community/blog/jupyter-notebook-r#comments)
-
-
-
-  Possible help:
   - https://github.com/ContinuumIO/anaconda-issues/issues/11108
   - https://www.storybench.org/install-r-jupyter-notebook/

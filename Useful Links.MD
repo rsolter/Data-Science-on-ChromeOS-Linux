@@ -1,4 +1,5 @@
-# Useful Links and Resources for Getting Started with Linux
+
+## Useful Links and Resources for Getting Started with Linux
 
 - [Linux for Data Scientists](https://medium.com/@8451marketing/linux-for-data-scientists-part-1-9fd8b0beb208)
 - [Data Science from the Command Line](https://www.datascienceatthecommandline.com/)
@@ -10,5 +11,20 @@
 - [How to Install and Use Debian Backports](https://linuxconfig.org/how-to-install-and-use-debian-backports)
 - [Setting up ZSH](https://www.ivaylopavlov.com/setting-oh-zsh-zsh/)
 
+- [Guide to Conda Environments](https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533)
 
-_test_
+
+
+## Core concepts
+
+**.bashrc**
+  - StackExchange [thread](https://unix.stackexchange.com/questions/129143/what-is-the-purpose-of-bashrc-and-how-does-it-work) on
+  - A short beginner's guide [link](https://www.maketecheasier.com/what-is-bashrc/)
+  - list of useful bash aliases from [Digital Ocean](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions)
+
+**PATH**
+  - Explaining code behind adding to the PATH from [askubuntu.com](https://askubuntu.com/questions/833922/what-does-the-export-path-line-in-bashrc-do)
+  - More info from [StackExchange](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path)
+
+**sources.list**
+  - Explanatory [article](https://linuxhint.com/how-to-add-a-package-repository-to-debian/) for Debian

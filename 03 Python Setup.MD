@@ -1,8 +1,6 @@
 
 
-
-
-### Python
+## Python
 
 **Python: Anaconda and Jupyer Notebooks**
 Following guide posted [here](https://randlow.github.io/posts/python/set-up-pixelbook-python/#install-nodejs):
@@ -26,7 +24,7 @@ _Required files_
 	  `$ tldr conda`
 
 
-
+****
 **Install Anaconda and add Anaconda3 distribution to the Linux PATH**
 
 
@@ -43,8 +41,8 @@ _Required files_
 
   - Activate the Python environment to check that you have successfully added Anaconda Python executable files into your Linux PATH. `source activate root`
 
-
-**Setting up Jupyter Lab**
+****
+**Setting up Jupyter Notebooks, Jupyter Lab, Spyder, & Anaconda Navigator**
 
   Follow steps in the same [blog](https://randlow.github.io/posts/python/set-up-pixelbook-python/#id12) referred to above:
 
@@ -69,17 +67,15 @@ _Required files_
    `anaconda-navigator`
 
 
+****
 
-
+**Libraries for Webscraping**
+- 'BeautifulSoup' `conda install -c anaconda beautifulsoup4`
+- 'Selenium' `conda install -c anaconda selenium`
 
 ****
 
-**Libraries worth Installing**
-- 'BeautifulSoup'
-- 'Selenium'
-
-
-**Getting Selenium Working**
+**Selenium**
 - Install a browser of your choice on the Debian partition, I installed Chrome using instructions [here](https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-debian-9/)
 - Download [ChromeDriver - Webdriver](https://chromedriver.chromium.org/downloads)
 - Copy the 'chromedriver' file to '/usr/local/bin' using `sudo cp chromedriver /usr/local/bin`
