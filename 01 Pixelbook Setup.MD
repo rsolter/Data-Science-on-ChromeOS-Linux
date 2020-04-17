@@ -73,9 +73,12 @@ Required for **devtools**:
 
       -   `sudo apt install libxml2-dev`
 
-Other required libraries, often for mapping packages in R:      
+Required for **sf**:
 
       -   `sudo apt install libudunits2-dev`
+
+Other required libraries, often for mapping packages in R:      
+
 
       -   `sudo apt install gdal-bin`
 
