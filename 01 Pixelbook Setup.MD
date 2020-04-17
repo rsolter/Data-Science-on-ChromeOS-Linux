@@ -118,8 +118,11 @@ Install Oh My ZSH! [official link](https://ohmyz.sh/)
   - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` or `sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
 
 Customization
+
     - Open congif file: `sudo nano ~/.zshrc`
+
     - Note that default theme is set to 'robbyrussel'. This can be changed to any of the pre-installed themes or a [custom themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization)
+
     - Custom themes must be installed in the themes folder `~/.oh-my-zsh`
 
 
