@@ -77,12 +77,16 @@ Required for **sf**:
 
       -   `sudo apt install libudunits2-dev`
 
-Other required libraries, often for mapping packages in R:      
-
-
       -   `sudo apt install gdal-bin`
 
       -   `sudo apt install libgdal-dev`
+
+Other required libraries, often for mapping packages in R:      
+
+
+
+
+
 
       -   `sudo apt install libprotobuf-dev protobuf-compiler`
 
