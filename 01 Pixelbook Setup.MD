@@ -81,12 +81,7 @@ Required for **sf**:
 
       -   `sudo apt install libgdal-dev`
 
-Other required libraries, often for mapping packages in R:      
-
-
-
-
-
+Required for **geojsonio**:
 
       -   `sudo apt install libprotobuf-dev protobuf-compiler`
 
@@ -94,12 +89,14 @@ Other required libraries, often for mapping packages in R:
 
       -   `sudo apt install libjq-dev`
 
+Required for **mapview**:
+
       -   `sudo apt install libfontconfig1-dev`
 
       -   `sudo apt install libcairo2-dev`
 
 
-  I also needed to [install Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
+I also needed to [install Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
 
       -  `sudo apt-get install -y default-jre`
       -  `sudo apt-get install -y default-jdk`

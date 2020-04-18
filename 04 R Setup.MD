@@ -46,7 +46,7 @@ Adding R to Jupyter notebooks installed via Anaconda is tricky. After a few fail
 
   Among the packages [recommended by RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages), I installed the following:
 
-      `install.packages("rvest","tidyverse","shiny","dtwclust","caret","WDI","leaflet","sf","fields","RODBC","DBI","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly","forecast","tseries")`
+      `install.packages("rvest","tidyverse","shiny","dtwclust","caret","WDI","leaflet","sf","fields","RODBC","DBI","Hmisc","zoo","devtools","jsonlite","rmarkdown","randomForest","multcomp","kableExtra","data.table","reshape","tm","plotly","forecast","tseries", "geojsonio", "tmap", "ggmap","mapdata","mapview","rgdal","spData")`
 
   (_Ongoing issues with "prophet", "xlsx"_)
 
