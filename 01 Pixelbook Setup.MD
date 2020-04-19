@@ -96,7 +96,7 @@ Required for **mapview**:
       -   `sudo apt install libcairo2-dev`
 
 
-I also needed to [install Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/):
+I also needed to [install Java](https://www.r-bloggers.com/installing-rjava-on-ubuntu/) for **xlsx**:
 
       -  `sudo apt-get install -y default-jre`
       -  `sudo apt-get install -y default-jdk`
