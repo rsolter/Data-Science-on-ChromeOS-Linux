@@ -129,7 +129,26 @@ Customization
 
     - Custom themes must be installed in the themes folder `~/.oh-my-zsh`
 
+****
 
+**ZSH/BASH**
+
+Temporarily switch between zsh and bash within the same terminal by executing `exec bash` or `exec zsh`.
+
+To source your profile at the same time, use `exec bash --login`
+
+Set either to be the default by executing `chsh -s /bin/bash` or `chsh -s /bin/zsh`
+
+****
+
+**Aliases**
+
+Aliases are declared inside `~/.bashrc` and can be added using any text editor (e.g. `nano ~/.bashrc`)
+
+After adding aliases to the .bashrc, the aliases can be made availabe in the current session by typing `source ~/.bash_profile`
+
+    `# Juptyter Notebook
+    alias jn="jupyter notebook"`
 
 
 ****

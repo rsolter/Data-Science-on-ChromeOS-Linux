@@ -13,6 +13,7 @@
 
 - [Guide to Conda Environments](https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533)
 
+- [Backing up on Google Drive with rclone](https://www.howtogeek.com/451262/how-to-use-rclone-to-back-up-to-google-drive-on-linux/)
 
 
 ## Core concepts
