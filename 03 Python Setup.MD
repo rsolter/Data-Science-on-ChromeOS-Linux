@@ -69,9 +69,17 @@ _Required files_
 
 ****
 
-**Libraries for Webscraping**
+**Extra Libraries Installed**
+
+_Web Scraping_
 - 'BeautifulSoup' `conda install -c anaconda beautifulsoup4`
 - 'Selenium' `conda install -c anaconda selenium`
+
+_Visualizations_
+- 'Plotly/Orca' `conda install -c plotly plotly-orca`
+
+_NLP_
+- 'spacy' - `conda install -c conda-forge spacy`
 
 ****
 

@@ -42,7 +42,7 @@ The steps below are ones I took to set up my Pixelbook's version of Debian 10 so
 
 **Install Debian Backports**
 
-Debian is a very stable distribution of Linux and as a feature doesn't stay as up to date as others automatically. For example, when I first installed R without backports, the most up to date version I could install was 1.5 years old. To get around this, you can install Debian backports. Explainer article [here](https://linuxconfig.org/how-to-install-and-use-debian-backports)
+Debian is a very stable distribution of Linux and as a feature doesn't stay as up to date as others automatically. For example, when I first installed R without backports, the most up to date version I could install was 1.5 years old. To get around this, you can install Debian backports. Explainer article [here](https://linuxconfig.org/how-to-install-and-use-debian-backports) and [here](https://chromeunboxed.com/add-debian-buster-backports-chromebook-chrome-os-updated-packages/)
 
 
 **Adding the Debian Unstable Repository**
