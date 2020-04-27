@@ -20,15 +20,13 @@ The steps below are ones I took to set up my Pixelbook's version of Debian 10 so
 
 ****
 
-**Install Nano**
+**Install CL Utilities**
 
     - `sudo apt install nano`
-
-****
-
-**Install gdebi**
-
     - `sudo apt install gdebi`
+    - `sudo apt install tree`
+    - `sudo apt install mawk`
+    - `sudo pip install csvkit`
 
 ****
 
@@ -38,7 +36,6 @@ The steps below are ones I took to set up my Pixelbook's version of Debian 10 so
 
 
 ****
-
 
 **Install Debian Backports**
 
