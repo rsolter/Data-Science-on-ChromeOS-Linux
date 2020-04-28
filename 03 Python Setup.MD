@@ -77,6 +77,7 @@ _Web Scraping_
 
 _Visualizations_
 - 'Plotly/Orca' `conda install -c plotly plotly-orca`
+- 'Cufflinks' `conda install -c conda-forge cufflinks-py`
 
 _NLP_
 - 'spacy' - `conda install -c conda-forge spacy`
