@@ -1,37 +1,19 @@
 
-## github.io Tools
-
-### Guides and tools for creating a github.io page with Jekyll
-
-**Required software**
-
-- Ruby 2.5 or greater
-- Ruby Gems -
-- GCC + Make: ensure installation with `gcc -v` `make -v`
-
-https://jekyllrb.com/docs/installation/ubuntu/
+## Guides and tools for creating a github.io page with Jekyll
 
 
-
-Install [plainwhite](https://github.com/thelehhman/plainwhite-jekyll) theme: `gem install plainwhite`
-
-**Other resources**
+**Resources**
 - [Jonathan McGlone's Guide](http://jmcglone.com/guides/github-pages/)
 - [Jekyll website](https://jekyllrb.com/)
+- [Giraffe Academy - YouTube Tutorial](https://www.youtube.com/watch?v=T1itpPvFWHI&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=1)
+- [Debian Error Handling](https://stackoverflow.com/questions/49800432/gem-cannot-access-rubygems-org)
+- Another useful [tutorial](https://decentralized-id.com/how-to-contribute/website-config-minimal-mistakes/)
 
 
 
 
-## Steps
 
-1. Fork the repository [https://github.com/mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes)
-2. Remove the unnecessary folders and files. See link [here](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
-3. Update the `GemFile`. See link [here](https://mmistakes.github.io/minimal-mistakes/docs/installation/#install-dependencies)
-
-
-
-
-## What is jekyll?
+### What is jekyll?
 
 Jekyll is a static website generator that can be written in markdown and is widely-used to build a blog from github repositories
 
@@ -57,7 +39,7 @@ _Checking to ensure they're installed_
 `jekyll -v`
 
 
-## Creating a jekyll
+### Creating a jekyll
 
 Creation
 `jekyll new <<name>>`
@@ -68,5 +50,17 @@ normal execution: `jekyll serve`
 
 
 
-## Error when updating/downloading ruby gems files:
+### Error when updating/downloading ruby gems files:
 https://stackoverflow.com/questions/49800432/gem-cannot-access-rubygems-org
+
+
+### Adding theme
+
+Inside existing gemfile, add `gem "minimal-mistakes-jekyll"`
+Fetch the updated gem file `bundle install`
+Update the  config.yml with `theme: minimal-mistakes-jekyll`
+
+Finalize by typing `bundle exec jekyll serve`.
+
+However, this will Building Warning errors for Layout: Page and Layout: Post.
+This is caused by incompatible layout templates created when switching pages. For a quick fix, ensure any and all layout: '' in the front matter of each .MD file read `layout: default`
