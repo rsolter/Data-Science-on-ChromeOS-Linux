@@ -3,6 +3,7 @@
 
 
 **Resources**
+- DataOptimal [YouTube Tutorial](https://www.youtube.com/watch?v=qWrcgHwSG8M)
 - [Jonathan McGlone's Guide](http://jmcglone.com/guides/github-pages/)
 - [Jekyll website](https://jekyllrb.com/)
 - [Giraffe Academy - YouTube Tutorial](https://www.youtube.com/watch?v=T1itpPvFWHI&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=1)
@@ -38,6 +39,8 @@ _Checking to ensure they're installed_
 `gem -v`
 `jekyll -v`
 
+
+## Installing the theme using the remote method
 
 ### Creating a jekyll
 

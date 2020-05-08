@@ -83,6 +83,9 @@ _Visualizations_
 _NLP_
 - 'spacy' - `conda install -c conda-forge spacy`
 
+_Tensorflow_
+- 'tensorflow' - `pip install tensorflow`
+
 ****
 
 **Selenium**
